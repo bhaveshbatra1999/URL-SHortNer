@@ -1,0 +1,19 @@
+{
+  "name": "url-shortner",
+  "version": "1.0.0",
+  "description": "URL SHortener",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bhavesh",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "mongoose": "^6.0.5",
+    "nodemon": "^2.0.12"
+  }
+}

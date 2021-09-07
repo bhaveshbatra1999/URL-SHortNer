@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        URL ShortNer | <%- main %>  
+    </title>
+    
+    <!--font awesome=====================================================================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">  
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/css/style.css">
+
+    <!--Favicon Img======================================================================================================================================================================================================-->
+    <link rel="icon" type="image/png" href="../public/img/favicon.png"/>
+    
+    <!-- Fonts Link========================================================================-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+</head>
+<body>
+
+    <h1 id="URLheading" style="font-family: Arial; font-weight: bold;">
+        URL ShortNer 
+    </h1>
+
+<br>
+
+    <div class="mainURLSection">
+        <div class="upperDiv mb-3">
+            <h2 style="font-family: Arial; font-weight: bold;">Paste the URL to be Shortened </h2>
+        </div>
+
+        <form action="/" method="POST">
+            <input type="text" name="longURL" id="longUrl" placeholder="Paste your URL" required>
+            <input type="submit" value="SHORT" id="submitbtn">
+        </form>
+       
+        <div class="lowerDiv mt-2">
+            <p>
+                <i class="fas fa-at"></i>  : <span style="font-weight: bold;">bhavesh.batra1999@gmail.com</span>
+            </p>        
+        </div>
+
+    </div>
+
+    <table class="mt-5">
+        <thead>
+          <tr>
+            <th style="padding: 1em;" scope="col">LONG URL</th>
+            <th style="padding: 1em;" scope="col">SHORT URL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <% if(urldata !== "") { %>                
+                <td id="longURL_changes" data-label="LONG URL"> <%- urldata.LongURL %> </td>
+                <td style="font-weight:bold" data-label="SHORT URL"> http://localhost:2000/<%- urldata.ShortURL %> </td>
+                <% } %>
+              <!-- (aria-multiline="true") will create multi line in the row --> 
+          </tr>
+        </tbody>
+      </table>
+    
+
+</body>
+</html>
