@@ -141,7 +141,7 @@ table {
   #buy_button
   {
       border: none;
-      color: blue;
+      color: rgb(161, 161, 179);
       font-weight: bold;
       background-color: transparent;
   }
